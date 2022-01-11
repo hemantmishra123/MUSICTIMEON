@@ -1,1 +1,1 @@
-web: waitress-serve --port=8000 musicplayer.wsgi:application
+web: gunicorn musicplayer.wsgi 
