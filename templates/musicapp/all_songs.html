@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load socialaccount %}
-{% block title %} All Songs {% endblock title %}
+{% block title %}   All Songs {% endblock title %}
 {% block body %}
 
 <br>
@@ -17,7 +17,7 @@
               <option selected="selected" disabled>Languages</option>
               {% if all_languages %}
                   {% for language in all_languages %}
-                      <option value={{language}}>{{language}}</option>
+B                      <option value={{language}}>{{language}}</option>
                   {% endfor %}
               {% endif %}
             </select>
@@ -41,12 +41,12 @@
 
   {% if not query_search %}
   <header class="section-heading">
-    <h5 class="section-title">ALL SONGS</h5>
+    <h5 style="color : white ;" class="section-title">ALL SONGS</h5>
   </header>
   <hr>
   {% else %}
   <header class="section-heading">
-    <h5 class="section-title">SEARCH RESULTS</h5>
+    <h5 style="color : white ;" class="section-title">SEARCH RESULTS</h5>
   </header>
   <hr>
   {% endif %}
