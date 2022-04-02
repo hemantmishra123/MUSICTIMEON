@@ -22,13 +22,6 @@
         {
             font-family: 'Source Code Pro', monospace;
         }
-@media only screen and (orientation: landscape) {
-  body {
-    background-color: lightblue;
-  }
-}
-
-      
         .hovereffect {
     width: 100%;
     height: 100%;
@@ -55,7 +48,7 @@
   .hovereffect img {
     display: block;
     position: relative;
-BB    -webkit-transition: all .4s linear;
+    -webkit-transition: all .4s linear;
     transition: all .4s linear;
   }
 
@@ -82,8 +75,8 @@ BB    -webkit-transition: all .4s linear;
     border: 1px solid #fff;
     background-color: transparent;
     opacity: 0;
-  B  filter: alpha(opacity=0);
-B    -webkit-transition: all .2s ease-in-out;
+    filter: alpha(opacity=0);
+    -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     margin: 50px 0 0;
     padding: 7px 14px;
@@ -96,7 +89,7 @@ B    -webkit-transition: all .2s ease-in-out;
   .hovereffect:hover img {
     -ms-transform: scale(1.2);
     -webkit-transform: scale(1.2);
-   BB transform: scale(1.2);
+    transform: scale(1.2);
   }
 
   .hovereffect:hover .overlay {
@@ -125,11 +118,11 @@ B    -webkit-transition: all .2s ease-in-out;
 
   body {
     /* Margin bottom by footer height */
-BB   B margin-bottom: 0px;
+    margin-bottom: 0px;
   }
 
-  .fooBBter {
-BB    position: fixed;
+  .footer {
+    position: fixed;
     bottom: 30px;
     width: 100%;
     /* Set the fixed height of the footer here */
@@ -138,10 +131,12 @@ BB    position: fixed;
   }
 
 .bg-nav {
-    background: #8E0E00;  /* fallback for old browsers */
-bAackgroBund: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-B
+    background: #8E0E00;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .lg-nav{
@@ -152,9 +147,8 @@ background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Fi
 }
 
 
-
        
-  </style>
+    </style>
     {% block header %} {% endblock header %}
     
 </head>
@@ -164,8 +158,8 @@ background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Fi
             <h1><a href="{% url 'index' %}" class="navbar-brand">
             <strong style="color:white">hemantmusic</strong></a></h1>
             <div class="collapse navbar-collapse">
-               <a href="{% url 'index' %}" class="btn btn-outline-light mt-2 mx-1">HOME</a>
-                <a style="color : white;" href="{% url 'all_songs' %}" class="btn btn-outline-light mt-2 mx-1">ALL SONGS</a>
+                <a href="{% url 'index' %}" class="btn btn-outline-light mt-2 mx-1">HOME</a>
+                <a href="{% url 'all_songs' %}" class="btn btn-outline-light mt-2 mx-1">ALL SONGS</a>
                 {% if request.user.is_active %}
                 
                 <div class="btn-group mt-2 mx-1">
@@ -205,7 +199,7 @@ background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Fi
     <br>
     <br>
     <br>
-     
+    
     <!-- jQuery first, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
